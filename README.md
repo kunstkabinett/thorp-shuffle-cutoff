@@ -1,18 +1,21 @@
-# Title of the agenda
+# When does a shuffled deck forget its order?
 
-### Motivation
+Shuffle a deck of 256 cards eight times. Pick any card: it is equally likely to occupy any position. Yet almost every possible ordering of the deck is still impossible. This happens in the Thorp shuffle, where each step cuts the deck in half and interleaves corresponding pairs, using a fresh coin toss to choose each pair’s order. How much longer does it take to erase the correlations between cards?[^openai-2026]
 
-Write one paragraph introducing the topic in a popular-science style:
-what is the question, and why is it interesting? Aim for a curious reader
-without specialist background.
+For $N=2^d$ cards, one card becomes uniform after $d$ shuffles. The whole deck needs roughly twice as many just to have enough possible outcomes: each shuffle uses $N/2$ random bits, while a uniform permutation requires about $\log_2(N!)$ bits. Counting outcomes proves that the deck remains far from uniform before $(2-\varepsilon)d$ shuffles, for every fixed $0<\varepsilon<2$.[^openai-2026]
 
-Beyond this introduction, the format is up to you. You could point out
-interesting families of questions, explain a useful example, describe
-what is known or where progress seems possible, or link to relevant
-issues and background reading. A short starting point is enough;
-the agenda can grow with the discussion.
+Morris proved an $O(d^3)$ mixing bound.[^morris-2013] OpenAI’s *Optimal-order mixing of the Thorp shuffle* claims an $O(d)$ bound, with an explicit constant of 1600; a companion claims 512.[^openai-2026][^frames-2026] These research preprints leave the leading constant and a possible sharp transition unresolved. Their upper bounds are starting points to scrutinize, not independently certified results of this agenda.
 
-Papers, notes, and expositions can go in [writeups/](writeups/).
+**Root question:** Does the Thorp shuffle have cutoff at $2\log_2 N$ shuffles? Here *cutoff* means that, for every fixed $\varepsilon>0$, the full deck’s distance from uniform tends to zero after $(2+\varepsilon)d$ shuffles, complementing the counting lower bound. Distance means total variation: the largest probability discrepancy over all events about the final deck.
 
-See the [contribution guide](https://public-observatory.github.io/docs.html)
-for the shared workflow and setup instructions.
+Our proposed route is:
+
+- **Compute small decks exactly.** Compare the full permutation distribution with one- and two-card observations. Find what those observations miss.
+- **Look for surviving correlations.** Find a statistic that still distinguishes the deck from uniform after $(2+\varepsilon)d$ shuffles, or rigorously rule out a promising candidate.
+- **Reduce the upper-bound losses.** Separate the time spent randomizing large groups of cards from the additional time used to control the whole deck. Improve either step toward the proposed threshold.
+
+Begin with the [problem drafts](ISSUE_DRAFTS.md). [Reading notes](writeups/literature.md) distinguish the papers’ results from this agenda’s proposed threshold. See the shared [contribution guide](https://public-observatory.github.io/docs.html).
+
+[^openai-2026]: OpenAI, *Optimal-order mixing of the Thorp shuffle* (2026), September 26 research preprint; Theorem 1.1, §2 and §§4–7. [Pinned paper](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Optimal-order-mixing-of-the-Thorp-shuffle-September-26-2026/paper.pdf).
+[^morris-2013]: Ben Morris, *Improved mixing time bounds for the Thorp shuffle*, **Combinatorics, Probability and Computing** 22 (2013), 118–132; [author preprint](https://arxiv.org/abs/0912.2759v1), §4, Theorem 8.
+[^frames-2026]: OpenAI, *Random coordinate frames and partial permutation laws* (2026), September 26 research preprint; Corollary 11.4. [Pinned paper](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Random-coordinate-frames-and-partial-permutation-laws-September-26-2026/main.pdf).
