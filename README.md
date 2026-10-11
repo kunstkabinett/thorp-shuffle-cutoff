@@ -10,11 +10,11 @@ Morris proved an $O(d^3)$ mixing bound.[^morris-2013] OpenAI’s *Optimal-order 
 
 Our proposed route is:
 
-- **Compute small decks exactly.** Compare the full permutation distribution with one- and two-card observations. Find what those observations miss.
-- **Look for surviving correlations.** Find a statistic that still distinguishes the deck from uniform after $(2+\varepsilon)d$ shuffles, or rigorously rule out a promising candidate.
-- **Reduce the upper-bound losses.** Separate the time spent randomizing large groups of cards from the additional time used to control the whole deck. Improve either step toward the proposed threshold.
+- **[Compute small decks exactly.](https://github.com/public-observatory/thorp-shuffle-cutoff/issues/1)** Compare the full permutation distribution with one- and two-card observations. Find what those observations miss.
+- **[Look for surviving correlations.](https://github.com/public-observatory/thorp-shuffle-cutoff/issues/2)** Find a statistic that still distinguishes the deck from uniform after $(2+\varepsilon)d$ shuffles, or rigorously rule out a promising candidate.
+- **[Reduce the upper-bound losses.](https://github.com/public-observatory/thorp-shuffle-cutoff/issues/3)** Separate the time spent randomizing large groups of cards from the additional time used to control the whole deck. Improve either step toward the proposed threshold.
 
-Begin with the [problem drafts](ISSUE_DRAFTS.md). [Reading notes](writeups/literature.md) distinguish the papers’ results from this agenda’s proposed threshold. See the shared [contribution guide](https://public-observatory.github.io/docs.html).
+Begin with the [open questions](https://github.com/public-observatory/thorp-shuffle-cutoff/issues?q=is%3Aissue%20is%3Aopen%20label%3Aquestion). [Reading notes](writeups/literature.md) distinguish the papers’ results from this agenda’s proposed threshold. See the shared [contribution guide](https://public-observatory.github.io/docs.html).
 
 [^openai-2026]: OpenAI, *Optimal-order mixing of the Thorp shuffle* (2026), September 26 research preprint; Theorem 1.1, §2 and §§4–7. [Pinned paper](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Optimal-order-mixing-of-the-Thorp-shuffle-September-26-2026/paper.pdf).
 [^morris-2013]: Ben Morris, *Improved mixing time bounds for the Thorp shuffle*, **Combinatorics, Probability and Computing** 22 (2013), 118–132; [author preprint](https://arxiv.org/abs/0912.2759v1), §4, Theorem 8.
