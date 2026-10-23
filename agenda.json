@@ -1,9 +1,8 @@
 {
   "title": "When does a shuffled deck forget its order?",
   "kind": "open-agenda",
-  "question": "Does the Thorp shuffle on N = 2^d cards have total-variation cutoff at 2 log₂ N physical shuffles?",
+  "question": "Does the Thorp shuffle on $N=2^d$ cards have total-variation cutoff at $2\\log_2 N$ shuffles?",
   "created": "2026-10-11T05:52:16Z",
-  "summary": "Every card is uniform after d Thorp shuffles, while counting outcomes forces the whole deck to need about 2d. Recent OpenAI preprints claim mixing in a constant multiple of d but leave the sharp transition unresolved. Compute exact small-deck laws, identify surviving correlations, and sharpen full-deck upper bounds to test cutoff at 2d.",
   "maintainers": [
     "isabeldahlgren"
   ],
@@ -12,5 +11,9 @@
     "card-shuffling",
     "mixing-times",
     "cutoff"
-  ]
+  ],
+  "image": {
+    "path": "images/agenda.jpg",
+    "alt": "Playing cards cut into two streams and interleaved, transitioning from an orderly deck into a swirling scattered arrangement."
+  }
 }

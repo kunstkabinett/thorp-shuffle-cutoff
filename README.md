@@ -6,7 +6,7 @@ For $N=2^d$ cards, one card becomes uniform after $d$ shuffles. Counting possibl
 
 Morris proved an $O(d^3)$ mixing bound.[^morris-2013] OpenAI’s *Optimal-order mixing of the Thorp shuffle* claims an $O(d)$ bound, with an explicit constant of 1600; a companion claims 512.[^openai-2026][^frames-2026] These research preprints leave the leading constant and a possible sharp transition unresolved. Their upper bounds are starting points to scrutinize, not independently certified results of this agenda.
 
-**Root question:** Does the Thorp shuffle have cutoff at $2\log_2 N$ shuffles? Here *cutoff* means that, for every fixed $\varepsilon>0$, the full deck’s distance from uniform tends to zero after $(2+\varepsilon)d$ shuffles, complementing the counting lower bound. Distance means total variation: the largest probability discrepancy over all events about the final deck.
+The proposed *cutoff* at $2\log_2 N$ means that, for every fixed $\varepsilon>0$, the full deck’s distance from uniform tends to zero after $(2+\varepsilon)d$ shuffles, complementing the counting lower bound. Distance means total variation: the largest probability discrepancy over all events about the final deck.
 
 Our proposed route is:
 
