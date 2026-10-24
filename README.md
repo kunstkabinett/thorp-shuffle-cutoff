@@ -10,11 +10,11 @@ The proposed *cutoff* at $2\log_2 N$ means that, for every fixed $\varepsilon>0$
 
 Our proposed route is:
 
-- **[Compute small decks exactly.](https://github.com/public-observatory/thorp-shuffle-cutoff/issues/1)** Find what one- and two-card observations miss about the full distribution.
-- **[Look for surviving correlations.](https://github.com/public-observatory/thorp-shuffle-cutoff/issues/2)** Find a statistic that distinguishes the deck from uniform beyond the proposed threshold.
-- **[Reduce the upper-bound losses.](https://github.com/public-observatory/thorp-shuffle-cutoff/issues/3)** Identify where the proofs spend extra shuffles and sharpen those steps.
+- **[Compute small decks exactly.](https://github.com/kunstkabinett/thorp-shuffle-cutoff/issues/1)** Find what one- and two-card observations miss about the full distribution.
+- **[Look for surviving correlations.](https://github.com/kunstkabinett/thorp-shuffle-cutoff/issues/2)** Find a statistic that distinguishes the deck from uniform beyond the proposed threshold.
+- **[Reduce the upper-bound losses.](https://github.com/kunstkabinett/thorp-shuffle-cutoff/issues/3)** Identify where the proofs spend extra shuffles and sharpen those steps.
 
-See the [reading notes](writeups/literature.md) and [contribution guide](https://public-observatory.github.io/docs.html).
+See the [reading notes](writeups/literature.md) and [contribution guide](https://kunstkabinett.github.io/docs.html).
 
 [^openai-2026]: OpenAI, *Optimal-order mixing of the Thorp shuffle* (2026), September 26 research preprint; Theorem 1.1, §2 and §§4–7. [Pinned paper](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Optimal-order-mixing-of-the-Thorp-shuffle-September-26-2026/paper.pdf).
 [^morris-2013]: Ben Morris, *Improved mixing time bounds for the Thorp shuffle*, **Combinatorics, Probability and Computing** 22 (2013), 118–132; [author preprint](https://arxiv.org/abs/0912.2759v1), §4, Theorem 8.
