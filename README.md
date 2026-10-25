@@ -8,8 +8,8 @@ The best upper bounds are far from $2d$. Morris proved $O(d^3)$.[^morris-2013] T
 
 The conjecture would fail on a single example and follow from a single estimate. Each is a problem here:
 
-- **[Find a correlation that survives.](https://github.com/kunstkabinett/thorp-shuffle-cutoff/issues/2)** An event about the final deck whose probability stays a fixed distance from uniform after $(2+\varepsilon)d$ shuffles would refute cutoff at $2d$.
-- **[Close the gap from above.](https://github.com/kunstkabinett/thorp-shuffle-cutoff/issues/3)** Prove that $(2+\varepsilon)d$ shuffles suffice, or locate and remove one specific loss in the existing proofs.
+- **[Find a correlation that survives.](https://github.com/project-wk/thorp-shuffle-cutoff/issues/2)** An event about the final deck whose probability stays a fixed distance from uniform after $(2+\varepsilon)d$ shuffles would refute cutoff at $2d$.
+- **[Close the gap from above.](https://github.com/project-wk/thorp-shuffle-cutoff/issues/3)** Prove that $(2+\varepsilon)d$ shuffles suffice, or locate and remove one specific loss in the existing proofs.
 
 The [reading notes](writeups/literature.md) record what each source proves, and where.
 
